@@ -1,0 +1,27 @@
+.transactionHistory {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: cadetblue;
+  border-spacing: 0;
+}
+.title {
+  background-color: chartreuse;
+}
+
+.item {
+  text-align: center;
+}
+.title th {
+  padding: 10px;
+  color: darkblue;
+  border: 1px solid blue;
+}
+.item td {
+  padding: 10px 0;
+  border: 1px solid darkgray;
+}
+
+.item:nth-child(2n) {
+  background-color: lightgray;
+}

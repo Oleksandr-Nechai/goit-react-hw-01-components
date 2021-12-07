@@ -1,19 +1,25 @@
-import Profile from "./components/Profile/index.js";
-import user from "./components/Profile/user.json";
+import Profile from "./components/Profile";
+import Statistics from "./components/Statistics";
+import FriendList from "./components/FriendList";
+import TransactionHistory from "./components/TransactionHistory";
+import data from "./data";
 
 
 function App() {
   return (
     <div >
       <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.avatar}
-        stats={user.stats}
+  username={data.user.username}
+  tag={data.user.tag}
+  location={data.user.location}
+  avatar={data.user.avatar}
+  stats={data.user.stats}
       />
-       <Statistics statistic={statistics} />
-        <FriendsList friends={friends} />
-        <Transactions items={transactions} />
+<Statistics title="Upload stats" stats={data.datastat} />;
+      <Statistics stats={data.datastat} />;
+      <FriendList friends={data.friends} />;
+      <TransactionHistory items={data.transactions} />;
+ 
     </div>
   );
 }
